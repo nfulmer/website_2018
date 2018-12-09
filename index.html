@@ -1,10 +1,90 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <style>
+            body {margin:0;}
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                border: 1px solid dimgrey;
+                background-color: #333;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+                width: 100%;
+            }
+            li {
+                float: left;
+            }
+            li a, .dropbtn {
+                display: block;
+                color: white;
+                text-align:center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            /*active color, going to make sure dropdown works b4
+            li a:hover:not(.active){
+                background-color:#111;
+            }
+            .active,{
+                background-color:dimgrey;
+            }
+            */
+
+            li a:hover, .dropdown:hover .dropbtn {
+                background-color:aquamarine;
+            }
+            li.dropdown{
+                display: inline-block;
+            }
+
+            .dropdown-content{
+                display: none;
+                position: absolute;
+                background-color:fuchsia;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                color:black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            .dropdown-content a:hover{background-color:bisque}
+
+            .dropdown:hover .dropdown-content{
+                display: block;
+            }
+        </style>
+    </head>
 <body>
-    <h1>Hello</h1>
+    <div class="header">
+        <h2>Hello</h2>
+        <p>Welcome to Nate Fulmer's Project Website</p>
+    </div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <!--remember to add class="active" when you do this again-->
+        <li class = "dropdown">
+            <a href="javascript:void(0)">Research Papers</a>
+            <div class="dropdown-content">
+                <a href="machine_astrophysics_paper">Machine Learning</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link3</a>
+            </div>
+        </li>
+        <li><a href="#coding">Coding Projects</a></li>
+    </ul>
     <p>This is Nate Fulmer's project website</p>
-    <h2>Research Papers</h2>
-    <h3>Literature Review of Machine Learning Applications in Astrophysical Research</h3>
+    <h3>Research Papers</h3>
+    <p>Literature Review of Machine Learning Applications in Astrophysical Research</p>
     <button onclick="location.href='machine_astrophysics_paper.html'"type="button">Click Here</button>
+    <!--button works as expected, you can use it for other things-->
 </body>
 </html>
