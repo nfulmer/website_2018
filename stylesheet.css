@@ -1,18 +1,35 @@
+* {
+    box-sizing: border-box;
+}
 body {
+    font-family: Arial, Helvetica, sans-serif;
     margin:0;
   }
-p {
-margin: 25px;
+.header {
+    padding: 40px;
+    text-align: center;
+    background: #3ED2E3;
+    color: white;
+    font-family: "Lucida Console", Monaco, monospace;
 }
+.header h1 {
+    font-size: 40px;
+}
+.header p {
+   font-size: 22px;
+}
+
+/*
 h1 {
-display: inline;
+    display: inline;
     position: center;
     font: 100px Bookman;
     color: #3ED2E3; 
 }
-h3 {
-margin: 25px;
-font: Bookman
+*/
+
+.bodacious {
+  font-family: "Lucida Console", Monaco, monospace;
 }
 button {
 margin: 25px;
@@ -44,6 +61,10 @@ li a:hover:not(.active) {
 .active{
     background-color:#3ED2E3;
     }
+.main{
+    background-color: white;
+    padding: 20px;
+}
 /*
 DROP DOWN ON MENU
 li a:hover, .dropdown:hover .dropbtn {
